@@ -1,0 +1,19 @@
+canvas-input-container {
+  position: relative;
+}
+
+#input-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+input {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  margin: 0px;
+  padding: 1px 1px;
+}
