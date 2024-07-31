@@ -13,9 +13,11 @@ canvas-input-container {
 }
 
 input {
-  width: 10px;
-  height: 10px;
   text-align: center;
   margin: 0px;
-  padding: 1px 1px;
+  padding: 2px 2px;
+}
+
+input:focus {
+  outline: none;
 }
