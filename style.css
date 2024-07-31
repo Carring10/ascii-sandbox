@@ -3,11 +3,13 @@ canvas-input-container {
 }
 
 #input-container {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
+  top: 30px;
+  left: 20px;
+  width: 60%;
 }
 
 input {
