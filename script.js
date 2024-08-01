@@ -16,14 +16,19 @@ function updateCanvasSize() {
   // Calculate the number of input fields
   const totalInputs = (selectedSize * selectedSize);
 
-  // Set CSS Grid properties dynamically (10px width + 2px padding on each side)
-  inputContainer.style.gridTemplateColumns = `repeat(${selectedSize}, 14px)`;
-  inputContainer.style.gridTemplateRows = `repeat(${selectedSize}, 14px)`;
+  // Set CSS Grid properties dynamically
+  inputContainer.style.gridTemplateColumns = `repeat(${selectedSize}, 20px)`;
+  inputContainer.style.gridTemplateRows = `repeat(${selectedSize}, 20px)`;
 
   // Append input fields to the input container
   for (let i = 0; i < totalInputs; i++) {
     const input = document.createElement("input");
+
     input.type = "text";
+    input.setAttribute('maxlength', '1');
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('id', 'input');
+
     inputContainer.appendChild(input);
   }
 }

@@ -15,7 +15,10 @@ canvas-input-container {
 input {
   text-align: center;
   margin: 0px;
-  padding: 2px 2px;
+  padding: 0px;
+  /* border: none; */
+  border: 1px solid #9b9b9b9d;
+  border-radius: 0px;
 }
 
 input:focus {
