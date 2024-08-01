@@ -33,7 +33,26 @@ function updateCanvasSize() {
   }
 }
 
+updateCanvasSize();
+
 // Add an event listener to handle the change in select element
 selectElement.addEventListener("change", updateCanvasSize);
 
-updateCanvasSize();
+// Auto focus next input field
+const input = document.getElementById('input');
+
+for (let input of inputContainer.children) {
+  input.oninput = function () {
+    if (input.nextElementSibling && input.value.length === 1) {
+      input.nextElementSibling.focus();
+    }
+  }
+
+  // When backspacing, focus the previous input field
+  input.onkeydown = function (event) {
+    const key = event.key;
+    if (input.previousElementSibling && inputContainer.lastElementChild.value === '' && key === 'Backspace' || key === 'Delete') {
+      input.previousElementSibling.focus();
+    }
+  }
+}
